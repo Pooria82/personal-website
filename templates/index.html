@@ -192,42 +192,6 @@
                 <div class="progressbar-item">
                     <div class="progressbar-content d-flex">
                         <h3>Python</h3>
-                        <h4>95%</h4>
-                    </div>
-                    <div class="progessbar-bg">
-                        <div class="progressbar-size" style="width:95%">
-
-                        </div>
-                    </div>
-                </div>
-                <!-- item -->
-                <div class="progressbar-item">
-                    <div class="progressbar-content d-flex">
-                        <h3>Django</h3>
-                        <h4>85%</h4>
-                    </div>
-                    <div class="progessbar-bg">
-                        <div class="progressbar-size" style="width:85%">
-
-                        </div>
-                    </div>
-                </div>
-                <!-- item -->
-                <div class="progressbar-item">
-                    <div class="progressbar-content d-flex">
-                        <h3>Database</h3>
-                        <h4>90%</h4>
-                    </div>
-                    <div class="progessbar-bg">
-                        <div class="progressbar-size" style="width:90%">
-
-                        </div>
-                    </div>
-                </div>
-                <!-- item -->
-                <div class="progressbar-item">
-                    <div class="progressbar-content d-flex">
-                        <h3>Linux</h3>
                         <h4>80%</h4>
                     </div>
                     <div class="progessbar-bg">
@@ -239,31 +203,7 @@
                 <!-- item -->
                 <div class="progressbar-item">
                     <div class="progressbar-content d-flex">
-                        <h3>Network Programming</h3>
-                        <h4>96%</h4>
-                    </div>
-                    <div class="progessbar-bg">
-                        <div class="progressbar-size" style="width:96%">
-
-                        </div>
-                    </div>
-                </div>
-                <!-- item -->
-                <div class="progressbar-item">
-                    <div class="progressbar-content d-flex">
-                        <h3>Machine Learning</h3>
-                        <h4>96%</h4>
-                    </div>
-                    <div class="progessbar-bg">
-                        <div class="progressbar-size" style="width:96%">
-
-                        </div>
-                    </div>
-                </div>
-                <!-- item -->
-                <div class="progressbar-item">
-                    <div class="progressbar-content d-flex">
-                        <h3>Java</h3>
+                        <h3>Django</h3>
                         <h4>75%</h4>
                     </div>
                     <div class="progessbar-bg">
@@ -275,11 +215,71 @@
                 <!-- item -->
                 <div class="progressbar-item">
                     <div class="progressbar-content d-flex">
-                        <h3>++C</h3>
+                        <h3>Database</h3>
+                        <h4>75%</h4>
+                    </div>
+                    <div class="progessbar-bg">
+                        <div class="progressbar-size" style="width:75%">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="progressbar-item">
+                    <div class="progressbar-content d-flex">
+                        <h3>Linux</h3>
                         <h4>70%</h4>
                     </div>
                     <div class="progessbar-bg">
                         <div class="progressbar-size" style="width:70%">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="progressbar-item">
+                    <div class="progressbar-content d-flex">
+                        <h3>Network Programming</h3>
+                        <h4>65%</h4>
+                    </div>
+                    <div class="progessbar-bg">
+                        <div class="progressbar-size" style="width:65%">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="progressbar-item">
+                    <div class="progressbar-content d-flex">
+                        <h3>Java</h3>
+                        <h4>50%</h4>
+                    </div>
+                    <div class="progessbar-bg">
+                        <div class="progressbar-size" style="width:50%">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="progressbar-item">
+                    <div class="progressbar-content d-flex">
+                        <h3>++C</h3>
+                        <h4>40%</h4>
+                    </div>
+                    <div class="progessbar-bg">
+                        <div class="progressbar-size" style="width:40%">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="progressbar-item">
+                    <div class="progressbar-content d-flex">
+                        <h3>Machine Learning</h3>
+                        <h4>30%</h4>
+                    </div>
+                    <div class="progessbar-bg">
+                        <div class="progressbar-size" style="width:30%">
 
                         </div>
                     </div>
@@ -373,87 +373,24 @@
         <div class="container">
             <h2>پروژه های اخیر</h2>
             <div class="projects-inner d-grid">
-                <!-- item -->
-                <div class="project-item">
+                <!-- items -->
+                {% for pro in projects %}
+                	<div class="project-item">
                     <div class="project-image">
-                        <img src="{% static '/images/projects/1.jpg' %}" alt="project image">
+                        <img src="{{ pro.image.url }}" alt="project image">
                     </div>
                     <div class="project-content">
-                        <h3>نام پروژه</h3>
+                        <h3>{{ pro.title }}</h3>
                         <div class="project-view d-flex">
-                            <span>تکنولوژی استفاده شده</span>
-                            <a href="javascript:void(0)" class="btn-view">مشاهده </a>
+                            <span>{{ pro.technology }}</span>
+                            <a href="{{ pro.address }}" class="btn-view" target="_blank">مشاهده </a>
                         </div>
                     </div>
                 </div>
-                <!-- item -->
-                <div class="project-item">
-                    <div class="project-image">
-                        <img src="{% static '/images/projects/2.jpg' %}" alt="project image">
-                    </div>
-                    <div class="project-content">
-                        <h3>نام پروژه</h3>
-                        <div class="project-view d-flex">
-                            <span>تکنولوژی استفاده شده</span>
-                            <a href="javascript:void(0)" class="btn-view">مشاهده </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- item -->
-                <div class="project-item">
-                    <div class="project-image">
-                        <img src="{% static '/images/projects/3.jpg' %}" alt="project image">
-                    </div>
-                    <div class="project-content">
-                        <h3>نام پروژه</h3>
-                        <div class="project-view d-flex">
-                            <span>تکنولوژی استفاده شده</span>
-                            <a href="javascript:void(0)" class="btn-view">مشاهده </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- item -->
-                <div class="project-item">
-                    <div class="project-image">
-                        <img src="{% static '/images/projects/4.jpg' %}" alt="project image">
-                    </div>
-                    <div class="project-content">
-                        <h3>نام پروژه</h3>
-                        <div class="project-view d-flex">
-                            <span>تکنولوژی استفاده شده</span>
-                            <a href="javascript:void(0)" class="btn-view">مشاهده </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- item -->
-                <div class="project-item">
-                    <div class="project-image">
-                        <img src="{% static '/images/projects/5.jpg' %}" alt="project image">
-                    </div>
-                    <div class="project-content">
-                        <h3>نام پروژه</h3>
-                        <div class="project-view d-flex">
-                            <span>تکنولوژی استفاده شده</span>
-                            <a href="javascript:void(0)" class="btn-view">مشاهده </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- item -->
-                <div class="project-item">
-                    <div class="project-image">
-                        <img src="{% static '/images/projects/6.jpg' %}" alt="project image">
-                    </div>
-                    <div class="project-content">
-                        <h3>نام پروژه</h3>
-                        <div class="project-view d-flex">
-                            <span>تکنولوژی استفاده شده</span>
-                            <a href="javascript:void(0)" class="btn-view">مشاهده </a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
             <div class="view-more-block">
-                <a href="#" class="btn btn-outline">مشاهده بیشتر</a>
+                <a href="https://github.com/Pooria82" class="btn btn-outline" target="_blank" >مشاهده بیشتر</a>
             </div>
         </div>
     </section>
@@ -629,10 +566,23 @@
                 گرافیک است </p>
 
             <ul>
-                <li><span>مهارت ها:-</span> HTML, CSS, BOOTSTRAP 4, JAVASCRIPT, FIGMA, PHOTOSHOP</li>
-                <li><span>زمان اتمام پروژه:-</span>15 days</li>
-                <li><span>آدرس پروژه:-</span> <a
-                        href="https://netcopy.ir">https://netcopy.ir</a>
+                <li>
+                    <span>
+                        مهارت ها:-
+                    </span>
+                    HTML, CSS, BOOTSTRAP 4, JAVASCRIPT, FIGMA, PHOTOSHOP
+                </li>
+                <li>
+                    <span>
+                        زمان اتمام پروژه:-
+                    </span>
+                    15 days
+                </li>
+                <li>
+                    <span>
+                        آدرس پروژه:-
+                    </span>
+                    <a href="https://netcopy.ir">https://netcopy.ir</a>
                 </li>
             </ul>
 
